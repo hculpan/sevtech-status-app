@@ -1,0 +1,9 @@
+<div>
+  <ng-template [ngIf]="isRunning"><img src="assets/green-light-4.png" height="25" width="25" /></ng-template>
+  <ng-template [ngIf]="isRunning == false && canReload"><img src="assets/red-light.jpg" height="25" width="25" /></ng-template>
+  {{ statusMsg }}
+  <ng-template [ngIf]="canReload"><img src="assets/reload.jpg" height="25" width="25" (click)="reload()" /></ng-template>
+</div>
+<div *ngIf="startServer" style="padding-top: 10px">
+    <button (click)="onClickMe()" class="btn btn-primary">Start Server</button>
+</div>
